@@ -1,0 +1,8 @@
+section(id='#{data.id}', class='Section Section'+indice)
+	div.Section-inner
+		h1.Section-title
+			|	#{data.title}
+		p.Section-description
+			|	#{data.description}
+		figure.Section-imageContainer
+			img.Section-image(src="http://lorempixel.com/400/400/#{data.category}", alt="#{data.title}")

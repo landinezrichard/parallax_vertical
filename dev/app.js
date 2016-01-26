@@ -3,36 +3,8 @@
 	const $ = require('jquery');
 	// const showMenu = require('./components/MainMenu');
 	const ScrollMagic = require('scrollmagic');
-
-	var capas = [
-		{
-			"id": "nube",
-			"valor1":"-100",
-			"valor2":"-500"
-		},
-		{
-			"id": "montaña",
-			"valor1":"-200",
-			"valor2":"-600"
-		},
-		{
-			"id": "ciudad",
-			"valor1":"-300",
-			"valor2":"-700"
-		},
-		{
-			"id": "personajes",
-			"valor1":"-500",
-			"valor2":"-900"
-		}
-	];
-
-	function getSections(secciones,size){
-		for(let i = 0; i < size; i++){
-			secciones[i].elemento = document.querySelector(`#${secciones[i].id}`);
-		}
-	} 
-
+	require('scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators');
+	
 	document.addEventListener('DOMContentLoaded', onDOMload);
 	
 	function onDOMload() {		
@@ -51,6 +23,7 @@
 				triggerElement: this
 			})
 			.setPin(this)
+			.addIndicators()//para ver indicadores de donde se dispara la escena, donde empieza y termina
 			.addTo(ctrl);
 			//this --> se refiere a cada una de las secciones
 			/* aquí indicamos que cada vez que una sección llegue al top del viewport, se fije en esa posicion (pin) 
@@ -69,6 +42,7 @@
 		  offset: wh*3
 		})
 		.setClassToggle("section#four", "is-active")
+		.addIndicators()
 		.addTo(ctrl);
 		
 	}

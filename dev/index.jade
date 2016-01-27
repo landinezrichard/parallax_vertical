@@ -7,7 +7,7 @@ html(lang="es")
 			|	Parallax Vertical
 		link(rel="stylesheet", type="text/css", href="css/estilos.css")
 	body
-		
+		include ./components/Header/template.jade
 		- var info = [{"id":"one","title":"Sección 1","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae eius magni quasi similique nihil in molestias earum. Dignissimos, deserunt repellat consectetur reiciendis et labore. Officia temporibus accusantium non nihil fuga.","category":"animals"},{"id":"two","title":"Sección 2","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae eius magni quasi similique nihil in molestias earum. Dignissimos, deserunt repellat consectetur reiciendis et labore. Officia temporibus accusantium non nihil fuga.","category":"city"},{"id":"three","title":"Sección 3","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae eius magni quasi similique nihil in molestias earum. Dignissimos, deserunt repellat consectetur reiciendis et labore. Officia temporibus accusantium non nihil fuga.","category":"nature"},{"id":"four","title":"Sección 4","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae eius magni quasi similique nihil in molestias earum. Dignissimos, deserunt repellat consectetur reiciendis et labore. Officia temporibus accusantium non nihil fuga.","category":"transport"}]		
 		
 		each data,index in info

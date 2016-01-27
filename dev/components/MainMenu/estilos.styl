@@ -1,0 +1,58 @@
+/*COMPONENTE MENU PRINCIPAL*/
+
+.MainMenu
+	background-color $black
+	line-height 1.2em
+
+	&-button
+		border 0
+		border-radius 5px
+		background-color $black
+		order 1
+		padding 0
+		margin-left 1rem
+
+	&-list
+		margin 0
+		padding 0
+		list-style none
+		height 0
+		overflow hidden
+		transition height .3s ease
+
+		&--show
+			height auto
+	&-item
+		transition all .3s ease
+		&:hover
+			background-color $white
+			.MainMenu-link
+				color $black
+
+	&-link
+		text-decoration none
+		color $white
+		width 100%
+		padding 1.5em
+		display block
+
+.icon-menu
+	font-size 2em
+
+/*Tablet*/
+
+@media (min-width: 768px)
+	.MainMenu
+		line-height 5em
+		margin-right 1.5rem
+		&-button
+			display none
+			
+		&-list
+			height 5em
+			
+		&-item
+			display inline-block
+			
+		&-link
+			padding 0 .5em

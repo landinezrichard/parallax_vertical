@@ -29,7 +29,12 @@
 				triggerElement: this
 			})
 			.setPin(this)
-			.addIndicators()//para ver indicadores de donde se dispara la escena, donde empieza y termina
+			.addIndicators({
+				colorStart: "rgba(255,255,255,0.5)",
+				colorEnd: "rgba(255,255,255,0.5)", 
+				colorTrigger : "rgba(255,255,255,1)",
+				name:name
+			})//para ver indicadores de donde se dispara la escena, donde empieza y termina
 			.addTo(ctrl);
 			//this --> se refiere a cada una de las secciones
 			/* aquí indicamos que cada vez que una sección llegue al top del viewport, se fije en esa posicion (pin) 
@@ -51,6 +56,8 @@
 		.addIndicators()
 		.addTo(ctrl);
 
+		// Cambiar el comportamiento del controlador
+		// Para animar desplazamiento en lugar de salto
 		ctrl.scrollTo(function(target) {
 
 			TweenMax.to(window, 0.5, {
